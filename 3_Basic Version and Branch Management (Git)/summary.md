@@ -38,12 +38,12 @@ Adapun versi detail resume sebagai berikut.
 
 Terdapat 3 (tiga), yaitu sebagai berikut.
 
-1. Version Control System (VCS), yang terbagi menjadi 3 masa.
+1. **Version Control System (VCS)**, yang terbagi menjadi 3 masa.
     1. Single User
     2. Centralized
     3. Distributed (termasuk Git yang lahir pada tahun 2005)
-2. Source Code Manager (SCM), dan
-3. Revision Control System (RCS)
+2. **Source Code Manager (SCM)**, dan
+3. **Revision Control System (RCS)**
 
 > Git sendiri merupakan salah satu VCS populer yang digunakan para *developer* untuk mengembangkan *software* secara bersama-sama.
 
@@ -59,7 +59,7 @@ Terdapat beberapa git *server* untuk menampung *remote* git *repositoryi* terseb
 
 ### **Steps**
 
-Berikut langkah-langkah untuk melakukan *set*-up *git* dengan menggunakan Github (*github.com*).
+Berikut langkah-langkah untuk melakukan *set*-up *git* dengan menggunakan Github ([github.com](https://www.github.com)).
 
 1. Buat *repository* baru di Github.
 2. Beri nama *repository* tersebut.
@@ -92,7 +92,7 @@ Selanjutnya, adalah sinkronisasi dengan *local repository* dengan *remote server
 
 Terdapat 3 (tiga) *staging area* di *local repository*.
 
-> **Working Directory** —> *git add* —> **Staging Area** —> *git commit* —> **Repository** —> *git push* —> **Remote Repository**
+> **Working Directory** → *git add* → **Staging Area** → *git commit* → **Repository** → *git push* → **Remote Repository**
 
 Terdapat beberapa *command* yang umum digunakan pada git sebagai berikut.
 
@@ -113,7 +113,7 @@ Terdapat beberapa *command* yang umum digunakan pada git sebagai berikut.
 
 Untuk mengisolasi perubahan-perubahan pada *project*. Terdapat 2 (dua) *branch* yang umum, yaitu Master dan Development. 
 
-Pada Development, merupakan *branch* yang digunakan untuk melakukan *push* dari para *developer*. 
+Pada Master, merupakan *branch* yang sudah siap untuk di-*publish* tanpa ada kesalahan lagi. *Developer* tidak boleh *commit* dan *push* pada *branch* ini. Sedangkan pada Development, merupakan *branch* yang digunakan untuk melakukan *push* dari para *developer*. 
 
 Langkah-langkah *branching* adalah sebagai berikut.
 
@@ -148,3 +148,15 @@ Merupakan alur dari penggunaan git, baik itu di Github dan yang lainnya. *Workfl
 Lebih baik lagi, dengan memisahkan *branch* utama (untuk *production* dan tidak boleh diubah maupun *push*, hanya *merge* dari *branch develop*), *branch develop* (untuk *developing* dan menggabungkan atau *merge* *pull request*), dan sisanya adalah *branch* untuk pengembangan fitur-fitur.
 
 Atau mungkin, membuat 1 (satu) *branch* lagi sebelum *branch* utama, yaitu *branch* testing.
+
+</br>
+</br>
+
+## **Summary**
+Tugas yang diberikan pada *section* ini adalah sebagai berikut.
+
+![Tugas Section 3](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5b631271-df94-44cf-807f-4b12363f6a4a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220824%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220824T101927Z&X-Amz-Expires=86400&X-Amz-Signature=9b935fc5114cd7057b482673575011e1c471e58cdf94fab8c1fef978472d9177&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+### **Penjelasan pengerjaan**
+
+(Menyusul setelah *live session*, dengan deadline sesuai jadwal yaitu pada hari Kamis, 25 Agustus 2022)
