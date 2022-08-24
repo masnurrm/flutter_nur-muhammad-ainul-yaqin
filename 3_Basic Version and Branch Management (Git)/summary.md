@@ -1,8 +1,7 @@
 # **(3) Basic Version and Branch Management (Git)**
 
-*File* ini merupakan resume dari materi section 3 pada program Flutter. From Zero to Hero dari Alterra Academy pada Studi Independen Bersertifikat Batch 3 tahun 2022.
+*File* ini merupakan resume dari materi *section* 3 pada program Flutter. From Zero to Hero dari Alterra Academy pada Studi Independen Bersertifikat Batch 3 tahun 2022.
 
-</br>
 
 ## **Data Diri**
 
@@ -17,7 +16,13 @@ Di section 3 (tiga) ini saya belajar tentang **Basic Version and Branch Manageme
 
 > **TL;DR**
 > 
-> Terdapat tiga hal
+> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* ini sebagai berikut.
+> 
+> 1. Mengenai *versioning*. *Versioning* adalah pengaturan versi atau pelacakan perubahan dari setiap kode dari program kita. Setiap perubahan kode dapat di-*track* baik itu dari perubahan kode, waktu, maupun siapa pengubahnya dengan memanfaatkan *tool* seperti Git.
+> 2. Beberapa *command* pada Git. Pada *section* ini, saya baru mempelajari beberapa *command* baru bagi saya untuk melakukan *versioning*. Beberapa di antaranya adalah `git stash`, `git stash apply`, `git reset`, dan sebagainya.
+> 3. Mengenai *workflow collaboration*. Pada *section* ini, saya mempelajari pemisahan *branch* untuk membuat *workflow* saat berkolaborasi tidak saling menghasilkan *conflict* satu sama lain. Caranya, yaitu dengan memisahkan *branch* setidaknya untuk *production* dan *development*. Selain itu, setiap penambahan fitur dapat juga membuat *branch* baru, sekaligus agar lebih mudah untuk di-*review* ketika dilakukan *pull request*.
+
+</br>
 
 Adapun versi detail resume sebagai berikut.
 
@@ -26,6 +31,8 @@ Adapun versi detail resume sebagai berikut.
 *Versioning* adalah pengaturan versi atau pelacakan perubahan dari setiap kode dari program kita. Contohnya, adalah pada revisi-revisi pada saat skripsi. Agar dapat melakukan *track*, setiap revisi pada bimbingan maka kita buat sebuah file baru. Begitu juga dengan *versioning*, setiap perubahan kode dapat di-*track* baik itu dari perubahan kode, waktu, maupun siapa pengubahnya.
 
 > Ingat, tidak ada project yang sempurna secara langsung. Selalu ada revisi di balik *project* yang sempurna. Bahkan project-project Google, Facebook, dan Apple pun seperti itu.
+
+</br>
 
 ### **Tools**
 
@@ -47,6 +54,8 @@ Dalam sebuah git *repository* (folder project), terdapat dua *file*, yaitu file 
 Git memantau setiap perubahan yang terjadi pada suatu *file*, termasuk *file source code*.
 
 Terdapat beberapa git *server* untuk menampung *remote* git *repositoryi* tersebut, contohnya Github, Bitbucket, dan Gitlab. Git *server* tersebut dapat dikatakan sebagai media sosial dari para *developer*.
+
+</br>
 
 ### **Steps**
 
@@ -77,6 +86,7 @@ Selanjutnya, adalah sinkronisasi dengan *local repository* dengan *remote server
     
     `git push -u origin main`
 
+</br>
 
 ### **Cara Kerja Git**
 
@@ -97,6 +107,8 @@ Terdapat beberapa *command* yang umum digunakan pada git sebagai berikut.
 - `git fetch`, untuk mengambil data *update* yang ada pada Remote Repository, tetapi tidak dimasukkan ke dalam Repository.
 - `git pull`, untuk menarik data *update* keseluruhan (gabungan dari `git fetch` dan `git merge`) dari Remote Repository ke dalam Repository.
 
+</br>
+
 ### **Branching**
 
 Untuk mengisolasi perubahan-perubahan pada *project*. Terdapat 2 (dua) *branch* yang umum, yaitu Master dan Development. 
@@ -109,6 +121,8 @@ Langkah-langkah *branching* adalah sebagai berikut.
 2. Kemudian, pindah ke *branch* tersebut untuk me-*update* di Remote Repository*.*
 3. `git merge`, digunakan untuk menggabungkan isi dari 2 (dua) *branch*. Digunakan juga untuk menggabungkan *branch-branch* ke dalam *branch* utama (Master/Main)
 4. `git checkout (nama tujuan)`, digunakan untuk keluar dari *branch* saat ini ke *branch* lain.
+
+</br>
 
 ### **Pull Request**
 
@@ -123,3 +137,14 @@ Langkah-langkah sebagai *developer* adalah sebagai berikut.
 
 Project Leader dapat melakukan Merge Pull Request ataupun tidak.
 
+</br>
+
+### **Workflow Collaboration**
+
+Merupakan alur dari penggunaan git, baik itu di Github dan yang lainnya. *Workflow collaboration* yang baik adalah dengan memisahkan *branch* utama dengan *branch* untuk pengembangan fitur-fitur.
+
+![Workflow](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/15570442-b201-47ee-99e0-3513d037ba03/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220824%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220824T094906Z&X-Amz-Expires=86400&X-Amz-Signature=a6032f17bf47aa372ae9c33ebe299cfe668b5a8fb299893c220a88891e39c3b6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+Lebih baik lagi, dengan memisahkan *branch* utama (untuk *production* dan tidak boleh diubah maupun *push*, hanya *merge* dari *branch develop*), *branch develop* (untuk *developing* dan menggabungkan atau *merge* *pull request*), dan sisanya adalah *branch* untuk pengembangan fitur-fitur.
+
+Atau mungkin, membuat 1 (satu) *branch* lagi sebelum *branch* utama, yaitu *branch* testing.
