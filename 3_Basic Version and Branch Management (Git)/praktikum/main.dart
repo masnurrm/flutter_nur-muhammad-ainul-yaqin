@@ -1,5 +1,8 @@
 void main() {
   print('Hello, World!');
   print('Hello, Alterra!');
-  print('Hello, ini branch featureB!');
+  print('Saya mengedit featureB dari Remote Repository');
+  print('Hello, saya di featureB. Apa kabar?');
+
+  print('Percobaan Conflict');
 }
