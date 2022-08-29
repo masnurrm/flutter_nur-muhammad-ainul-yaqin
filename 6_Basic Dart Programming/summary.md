@@ -10,117 +10,207 @@
 
 </br>
 
-## **Summary Materi Pertama**
-Di section 6 (enam) bagian pertama ini saya belajar tentang **pengenalan bahasa pemrograman Dart**
+Di section 6 (enam) ini saya belajar tentang **pemrograman dasar dengan bahasa Dart (lanjutan)**.
 
 > **TL;DR**
 > 
-> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* 6 bagian pertama ini sebagai berikut.
+> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* ini sebagai berikut.
 >
->1. Mengenai fitur bahasa pemrograman Dart. Bahasa pemrograman Dart sendiri sebenarnya sama dengan bahasa pemrograman lain. Namun, terdapat beberapa fitur yang menjadi unggulan dari bahasa pemrograman Dart, yaitu memiliki fitur *Type Safe* (konsistensi tipe data), *Null Safety* (keamanan untuk variabel yang bernilai *NULL*), *Rich Standart Library* (banyak dukungan *library* internal atau bawaan), serta *Multiplatform* (dapat berjalan pada berbagai jenis perangkat).
->2. Mengenai struktur kode Dart. Kode dengan bahasa pemrograman Dart dieksekusi mulai dari fungsi yang bernama fungsi `main`. Fungsi ini sendiri tidak mengembalikan nilai apa-apa (*void*).
->3. Mengenai pengenalan praktik penggunaan bahasa pemrograman Dart. Praktik pada *section* ini berkaitan dengan penggunaan komentar, variabel, tipe data, dan operator. Di *section* ini juga dijelaskan beberapa kondisi unik, seperti jenis variabel konstanta pada saat penjelasan mengenai variabel.
+>1. Mengenai fungsi pada bahasa pemrograman Dart lebih dalam. Fungsi dalam bahasa pemrograman Dart tidak hanya sebatas fungsi yang dideklarasikan secara konvensional, tetapi juga terdapat beberapa jenis fungsi, yaitu *Anonymous Function* (fungsi tanpa nama) dan *Arrow Function*.
+>2. Mengenai *async* dan *await* pada bahasa pemrograman Dart. Proses *async* dan *await* didukung penuh dalam bahasa pemrograman Dart. *Async* dan *await* ini membuat beberapa proses berjalan secara bersamaan (paralel). Proses *async* berarti suatu proses dijalankan secara paralel sembari proses lain juga dijalankan. Proses *await* berarti suatu proses dijalankan jika dan hanya jika proses lain telah selesai dijalankan atau dieksekusi.
+>3. Mengenai tipe data *future* dan *collection* pada bahasa pemrograman Dart. Tipe data *future* sendiri merupakan tipe data yang mendukung proses *async* dan *await* yang telah dijelaskan sebelumnya. Tipe data *collection* merupakan tipe data yang menampung banyak data sekaligus dalam satu variabel. Contoh tipe data *collection* meliputi `list` dan `map`.
 
 </br>
 
 Adapun versi detail resume sebagai berikut.
 
-### **Apa dan Mengapa Dart?**
-Dart adalah bahasa pemrograman yang dirancang untuk membuat aplikasi agar dapat berjalan dengan cepat serta juga dapat dikembangkan dengan cepat. Bahasa pemrograman Dart sendiri dikembangkan oleh Google untuk mengatasi masalah-masalah yang kerap dihadapi oleh bahasa pemrograman saat ini, misalnya JavaScript. Aplikasi yang dibuat dengan bahasa pemrograman Dart adalah aplikasi yang berjalan di sisi *client* (*frontend*), seperti:
+### **Fungsi (Lanjutan)**
 
-1. *Web* (yang sekarang masih kerap menggunakan bahasa pemrograman Javascript),
-2. *Desktop*, dan
-3. *Mobile*.
+Pada section ini dijelaskan beberapa jenis fungsi yang merupakan modifikasi struktur dari fungsi konvensional.
 
-Dart memiliki kesamaan dengan bahasa pemrograman lain. Bahasa pemrograman Dart memiliki fitur-fitur sebagai berikut.
+1. ***Anonymous Function***
+    
+    *Anonymous Function* merupakan fungsi yang tidak memiliki nama (anonim). Fungsi ini berfungsi sebagai data. Fungsi ini dapat ditulis dengan struktur sebagai berikut.
 
-1. *Type Safe*, yaitu menjamin konsistensi tipe data.
-2. *Null Safety*, yaitu memberi keamanan dari data bernilai hampa (*NULL*).
-3. *Rich Standart Library*, yaitu bahasa pemrograman Dart hadir dengan banyak dukungan *library* internal atau bawaan.
-4. *Multiplatform*, yaitu aplikasi yang dikembangkan dengan bahasa pemrograman Dart (dengan menggunakan *framework* Flutter) mampu berjalan pada berbagai jenis perangkat.
+    ```dart
+    () {
+        //Perintah yang dijalankan saat fungsi dipanggil
+    }
+    ```
 
-</br>
+    Sebagai contoh, berikut adalah contoh *source code* dengan menerapkan *Anonymous Function*.
 
-## **Dasar Pemrograman Dart**
+    ```dart
+    var hello = () {
+        print('Hello');
+    };
 
-Terdapat beberapa hal yang harus diperhatikan dalam mempelajari dasar dari bahasa pemrograman Dart sebagai berikut.
+    var jumlah = (int a, int b) {
+        return a + b;
+    };
 
-1. **Fungsi `Main`**
-    
-    Fungsi `main` merupakan bagian yang pertama kali dijalankan dalam *source code* dari pemrograman Dart. Fungsi ini harus memiliki nama `main` dapat memiliki tipe data `void` maupun `int`. Pada fungsi ini, berbagai *syntax,* perintah, prosedur, maupun fungsi sudah dapat diterapkan di dalamnya. Sebagai contoh, perintah `print()` digunakan untuk menampilkan data ke layar.
-    
-2. **Komentar**
-    
-    Komentar merupakan bagian dari *source code* yang berupa satu atau beberapa baris kode yang tidak dijalankan dengan tujuan untuk memberi catatan pada kode dan juga dapat untuk mencegah perintah untuk dijalankan. Cara untuk menulis atau membuat suatu baris kode menjadi komentar terdapat dua cara sebagai berikut.
-    
-    1. Diawali dengan tanda garis miring 2 kali. Cara ini digunakan untuk membuat satu baris kode menjadi komentar.
-    2. Diawali dengan tanda garais miring dan bintang (/*) serta diakhiri dengan tanda bintang dan garis miring (*/). Cara ini digunakan untuk membuat beberapa baris kode sekaligus menjadi komentar.
+    void main () {
+        hello();
+        print (jumlah(1, 2));
+    }
+    ```
 
-1. **Variabel**
+2. ***Arrow Function***
     
-    *Variabel* digunakan untuk menyimpan data atau *value*. *Variabel* harus memiliki nama yang dapat dipanggil dan digunakan untuk kebutuhan selanjutnya. Selain itu, *variabel* juga harus memiliki tipe data yang spesifik (dibahas pada poin nomor 4).
-    
-    Dalam penggunaannya, *variabel* harus dideklarasikan terlebih dahulu. Deklarasi *variabel* dilakukan dengan menentukan tipe data dari *variabel* tersebut kemudian diikuti dengan nama *variabel*-nya. 
-    
-    > Deklarasi *variabel* juga dapat dilakukan dengan menggunakan tipe data `var` dan diikuti dengan nama *variabel*. Secara otomatis, tipe data *variabel* tersebut adalah *NULL.*
-    
-    Setelah dideklarasikan, *variabel* tentu perlu diberi nilai atau *value*. Memberi nilai pada *variabel* dilakukan dengan menggunakan tanda sama dengan atau *assignment* (`=`). Selain itu, pemberian nilai pada suatu *variabel* dapat juga dilakukan langsung bersamaan saat deklarasi. Cara ini disebut dengan inisiasi *variabel*.
-    
-    Dalam bahasan mengenai *variabel*, terdapat suatu jenis *variabel* yang disebut sebagai konstanta. Konstanta adalah *variabel* yang sama seperti umumnya, namun nilai atau *value*-nya tetap dan tidak dapat diubah. Sehingga, konstanta hanya dapat diinisiasi atau diberi nilai di awal tanpa dapat diubah selanjutnya. Untuk membuat konstanta, maka perlu menggunakan tipe data `final` yang diikuti dengan nama *variabel* konstantanya dan dapat diberikan nilai atau *value* secara langsung.
-    
-2. **Tipe Data**
-    
-    Tipe data sendiri merupakan pendefinisian suatu data yang dapat dimiliki oleh suatu variabel agar dapat dikelola. Bahasa pemrograman Dart sendiri memiliki tipe data sederhana yang kerap disebut sebagai *primitive data type*. Jenis tipe data tersebut antara lain sebagai berikut.
-    
-    1. Int (bilangan bulat)
-        
-        Tipe data `int` menggantikan `var` dengan ketentuan data harus berupa bilangan bulat.
-        
-    2. Double (bilangan pecahan)
-        
-        Tipe data `double` menggantikan `var` dengan ketentuan data harus berupa bilangan pecahan (desimal). Penulisan pecahan sendiri harus menggunakan tanda titik, bukan tanda koma.
-        
-    3. Bool (boolean berupa true atau false)
-        
-        Tipe data `bool` menggantikan `var` dengan ketentuan data harus berupa pilihan `true` atau `false` saja.
-        
-    4. String (teks)
-        
-        Tipe data `string` menggantikan `var` dengan ketentuan data harus berupa teks atau *array of char*. Penulisan teks pada tipe data `string` harus diawali dan diakhiri dengan tanda kutip.
-        
-3. **Operator**
-    
-    *Operator* digunakan untuk melakukan operasi dalam pengolahan data dalam suatu variabel. Data yang dikelola oleh *operator* disebut sebagai `operand`. Terdapat beberapa jenis dari operator dalam bahasa pemrograman Dart sebagai berikut.
-    
-    1. *Arithmetic*
-        
-        Operator *arithmetic* digunakan untuk perhitungan matematis atau aritmatika. Operator ini meliputi tanda `+`, `-`, `*`, `/`, dan `%` (modulo).
-        
-    2. *Assignment*
-        
-        Operator *assignment* digunakan untuk memberi nilai pada suatu variabel. Operator ini meliputi tanda `=`, `+=`, `-=`, `*=`, `/=`, dan `%=`.
-        
-    3. *Comparison*
-        
-        Operator *comparison* digunakan untuk membandingkan kesetaraan nilai antara dua variabel. Operator ini meliputi tanda `==`, `<`, `<=`, `>`, dan `>=`.
-        
-    4. *Logical*
-        
-        Operator *logical* digunakan untuk menggabungkan beberapa kondisi secara diskrit. Operator ini meliputi tanda `&&` (dan), `||` (atau), serta `!` (tidak atau bukan).
+    *Arrow Function* merupakan fungsi yang dapat memiliki nama ataupun tidak. Fungsi ini berisi satu data baik dari proses maupun data statis. Nilai return fungsi ini diambil dari data tersebut. Fungsi ini dapat ditulis dengan struktur sebagai berikut.
 
+    ```dart
+    () => proses_yang_dijalankan_saat_fungsi_dipanggil();   
+    ```
 
+    Sebagai contoh, berikut adalah contoh *source code* dengan menerapkan *Arrow Function*.
 
-## **Summary Materi Kedua**
-Di section 6 (enam) bagian kedua ini saya belajar tentang **pemrograman dasar dengan bahasa pemrograman Dart**
+    ```dart
+    var hello = () => print('Hello');
 
-> **TL;DR**
-> 
-> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* 6 bagian kedua ini sebagai berikut.
->
->1. Mengenai fitur bahasa pemrograman Dart. Bahasa pemrograman Dart sendiri sebenarnya sama dengan bahasa pemrograman lain. Namun, terdapat beberapa fitur yang menjadi unggulan dari bahasa pemrograman Dart, yaitu memiliki fitur *Type Safe* (konsistensi tipe data), *Null Safety* (keamanan untuk variabel yang bernilai *NULL*), *Rich Standart Library* (banyak dukungan *library* internal atau bawaan), serta *Multiplatform* (dapat berjalan pada berbagai jenis perangkat).
->2. Mengenai struktur kode Dart. Kode dengan bahasa pemrograman Dart dieksekusi mulai dari fungsi yang bernama fungsi `main`. Fungsi ini sendiri tidak mengembalikan nilai apa-apa (*void*).
->3. Mengenai pengenalan praktik penggunaan bahasa pemrograman Dart. Praktik pada *section* ini berkaitan dengan penggunaan komentar, variabel, tipe data, dan operator. Di *section* ini juga dijelaskan beberapa kondisi unik, seperti jenis variabel konstanta pada saat penjelasan mengenai variabel.
+    var jumlah = (int a, int b) => return a + b;
+
+    void main () {
+        hello();
+        print (jumlah(1, 2));
+    }
+    ```
+
+Kedua jenis fungsi ini akan menghasilkan *return* yang sama, namun dengan penulisan yang berbeda dan lebih singkat dibanding penulisan konvensional.
 
 </br>
 
-Adapun versi detail resume sebagai berikut.
+### **Async-Await**
+
+*Async-Await* berarti sebuah metode untuk menjalankan beberapa proses tanpa perlu menunggu (dilakukan secara *asyncronus*). Proses *async-await* ditulis dalam bentuk fungsi.
+
+![Async-Await](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8ffb250-3a73-40a7-bd8f-01a673b50116/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220829%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220829T233201Z&X-Amz-Expires=86400&X-Amz-Signature=850871417f704ed09275ef47fbfae78720674857bf92ebd8d702da86f9dc6225&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+Fungsi ini dapat ditulis dengan struktur sebagai berikut.
+
+```dart
+void P1() {
+	Future.delayed(Duration(seconds: 1), () {
+		print('Hello dari p1');
+	});
+}
+
+void P1() {
+	print('Hello dari p1');
+}
+
+void main() {
+	p1();
+	p2();
+}
+```
+
+Pada *source code* tersebut, fungsi dari `p2()` akan dieksekusi terlebih dahulu, baru setelah 1 detik, fungsi `p1()` dieksekusi.
+
+```dart
+Future<void> P1() async {
+	await Future.delayed(Duration(seconds: 1), () {
+		print('Hello dari p1');
+	});
+}
+
+void P1() {
+	print('Hello dari p1');
+}
+
+void main() async {
+	await p1();
+	p2();
+}
+```
+
+Pada *source code* ini, fungsi dengan keyword *`Await`* akan menunggu hingga proses *asyncronus* selesai. Dengan kata lain, fungsi `p2()` tidak akan dieksekusi hingga fungsi `p1()` selesai tereksekusi. Istilahnya, menjadikan proses *asyncronus* seakan-akan bukan berupa proses *asyncronus*.
+
+### **Tipe Data Future**
+
+Tipe data `Future` merupakan data yang ditunggu. Tipe data ini membawa data `return` dari fungsi *asyncronus* dan juga berjalan secara *asyncronus*. Contoh penggunaannya adalah sebagai berikut.
+
+```dart
+Future<String> p1(){
+	return Future.delayed(Duration(seconds: 1), (){
+		return 'Hello dari p1';
+	});
+}
+
+void main() async {
+	var data = await p1();
+	print(data);
+}
+```
+
+### Collection
+
+*Collection* merupakan struktur data yang lebih canggih untuk menangani masalah yang lebih kompleks. Struktur data ini dapat menampung kumpulan data pada satu tempat atau variabel.
+
+1. **List**
+    
+    Struktur data `list` menyimpan data secara berbaris dengan tiap data memiliki *index*. *Index* pada `list` dimulai dari 0. Contoh penggunaan dari `list` adalah sebagai berikut.
+
+    ```dart
+    void main() async {
+        var scores = [];
+        //print(scores);
+        scores.add(60);
+        scores.add(80);
+        scores.add(90);
+        scores.add(70);
+        scores.add(85);
+        print(scores);
+
+        print(scores[0]);
+        print(scores[1]);
+        print(scores[2]);
+        print(scores[3]);
+        print(scores[4]);
+    }
+    ```
+
+    Dapat juga digunakan perulangan untuk mengisi dan mengakses data pada `list`.
+
+    ```dart
+    void main() async {
+        var scores = [60, 80, 90, 70, 85];
+        print(scores);
+
+        for (var score in scores) {
+            print(score);
+        }
+    }
+    ```
+
+2. **Map**
+    
+    Struktur data `map` menyimpan data secara *key-value*. *Key* berguna selayaknya *index* pada `list`. Sehingga, dapat digunakan untuk mengambil data (value). Contoh penggunaannya adalah sebagai berikut.
+
+    ```dart
+    void main() async {
+        var student = {};
+        student['name'] = 'Alex Under';
+        student['age'] = 16;
+        print(student);
+        
+        print(student['name']);
+        print(student['age']);
+    }
+    ```
+
+    Dapat juga digunakan perulangan untuk mengisi dan mengakses data pada `map`.
+
+    ```dart
+    void main() async {
+        var student = {
+            'name' : 'Alex Under', 
+            'age' : 16
+        };
+        print(student);
+        
+        for (var key in student.keys) {
+            print(student[key]);
+        }
+    }
+    ```
