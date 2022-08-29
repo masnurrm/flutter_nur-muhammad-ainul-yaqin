@@ -1,6 +1,6 @@
-# **(5) Introduction to Algorithm and Dart Programming**
+# **(6) Basic Dart Programming**
 
-*File* ini merupakan resume dari materi *section* 5 pada program Flutter. From Zero to Hero dari Alterra Academy pada Studi Independen Bersertifikat Batch 3 tahun 2022.
+*File* ini merupakan resume dari materi *section* 6 pada program Flutter. From Zero to Hero dari Alterra Academy pada Studi Independen Bersertifikat Batch 3 tahun 2022.
 
 ## **Data Diri**
 
@@ -10,12 +10,12 @@
 
 </br>
 
-## **Summary**
-Di section 5 (lima) ini saya belajar tentang **pengenalan bahasa pemrograman Dart.**
+## **Summary Materi Pertama**
+Di section 6 (enam) bagian pertama ini saya belajar tentang **pengenalan bahasa pemrograman Dart**
 
 > **TL;DR**
 > 
-> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* ini sebagai berikut.
+> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* 6 bagian pertama ini sebagai berikut.
 >
 >1. Mengenai fitur bahasa pemrograman Dart. Bahasa pemrograman Dart sendiri sebenarnya sama dengan bahasa pemrograman lain. Namun, terdapat beberapa fitur yang menjadi unggulan dari bahasa pemrograman Dart, yaitu memiliki fitur *Type Safe* (konsistensi tipe data), *Null Safety* (keamanan untuk variabel yang bernilai *NULL*), *Rich Standart Library* (banyak dukungan *library* internal atau bawaan), serta *Multiplatform* (dapat berjalan pada berbagai jenis perangkat).
 >2. Mengenai struktur kode Dart. Kode dengan bahasa pemrograman Dart dieksekusi mulai dari fungsi yang bernama fungsi `main`. Fungsi ini sendiri tidak mengembalikan nilai apa-apa (*void*).
@@ -107,3 +107,20 @@ Terdapat beberapa hal yang harus diperhatikan dalam mempelajari dasar dari bahas
     4. *Logical*
         
         Operator *logical* digunakan untuk menggabungkan beberapa kondisi secara diskrit. Operator ini meliputi tanda `&&` (dan), `||` (atau), serta `!` (tidak atau bukan).
+
+
+
+## **Summary Materi Kedua**
+Di section 6 (enam) bagian kedua ini saya belajar tentang **pemrograman dasar dengan bahasa pemrograman Dart**
+
+> **TL;DR**
+> 
+> Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* 6 bagian kedua ini sebagai berikut.
+>
+>1. Mengenai fitur bahasa pemrograman Dart. Bahasa pemrograman Dart sendiri sebenarnya sama dengan bahasa pemrograman lain. Namun, terdapat beberapa fitur yang menjadi unggulan dari bahasa pemrograman Dart, yaitu memiliki fitur *Type Safe* (konsistensi tipe data), *Null Safety* (keamanan untuk variabel yang bernilai *NULL*), *Rich Standart Library* (banyak dukungan *library* internal atau bawaan), serta *Multiplatform* (dapat berjalan pada berbagai jenis perangkat).
+>2. Mengenai struktur kode Dart. Kode dengan bahasa pemrograman Dart dieksekusi mulai dari fungsi yang bernama fungsi `main`. Fungsi ini sendiri tidak mengembalikan nilai apa-apa (*void*).
+>3. Mengenai pengenalan praktik penggunaan bahasa pemrograman Dart. Praktik pada *section* ini berkaitan dengan penggunaan komentar, variabel, tipe data, dan operator. Di *section* ini juga dijelaskan beberapa kondisi unik, seperti jenis variabel konstanta pada saat penjelasan mengenai variabel.
+
+</br>
+
+Adapun versi detail resume sebagai berikut.
