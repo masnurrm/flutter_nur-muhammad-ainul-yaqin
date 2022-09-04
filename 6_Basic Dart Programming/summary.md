@@ -84,7 +84,7 @@ Kedua jenis fungsi ini akan menghasilkan *return* yang sama, namun dengan penuli
 
 *Async-Await* berarti sebuah metode untuk menjalankan beberapa proses tanpa perlu menunggu (dilakukan secara *asyncronus*). Proses *async-await* ditulis dalam bentuk fungsi.
 
-![Async-Await](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8ffb250-3a73-40a7-bd8f-01a673b50116/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220829%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220829T233201Z&X-Amz-Expires=86400&X-Amz-Signature=850871417f704ed09275ef47fbfae78720674857bf92ebd8d702da86f9dc6225&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Async-Await](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c8ffb250-3a73-40a7-bd8f-01a673b50116/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220904%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220904T194215Z&X-Amz-Expires=86400&X-Amz-Signature=b4aa211cb65993a2ace62c910510e4e4009ab4f562d0b794b21431770dd96e96&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 Fungsi ini dapat ditulis dengan struktur sebagai berikut.
 

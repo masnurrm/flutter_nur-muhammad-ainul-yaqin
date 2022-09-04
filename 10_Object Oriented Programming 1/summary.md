@@ -18,7 +18,7 @@ Di section 10 (sepuluh) ini saya belajar tentang ***object oriented programming*
 > Terdapat 3 (tiga) hal utama yang saya pelajari pada *section* ini sebagai berikut.
 >
 >1. Mengenai OOP pada bahasa pemrograman Dart. OOP pada bahasa pemrograman Dart sendiri sama seperti yang terdapat pada bahasa pemrograman lain pada umumnya (C++, Java, JavaSript, Python, dan lainnya) yang mana memiliki keuntungan seperti kemudahan dalam *troubleshooting* serta mudah untuk digunakan ulang. OOP pada bahasa pemrograman Dart juga memiliki bagian-bagian yang sama seperti umumnya (*class, object, method, property, inheritance, generics*, dan lainnya).
->2. Mengenai *class* pada OOP bahasa pemrograman Dart. *Class* merupakan abstraksi, gambaran, blueprint dari sebuah benda (objek). *Class* memiliki ciri-ciri yang disebut *property* dan memiliki sifat dan kemampuan yang disebut *method*. Dari kelas yang dibuat, dapat dibuat objek berdasarkan kelas tersebut. Objek disimpan dalam variabel yang disebut juga dengan *instance of class*.
+>2. Mengenai *class* pada OOP bahasa pemrograman Dart. *Class* merupakan abstraksi, gambaran, *blueprint* dari sebuah benda (objek). *Class* memiliki ciri-ciri yang disebut *property* dan memiliki sifat dan kemampuan yang disebut *method*. Dari kelas yang dibuat, dapat dibuat objek berdasarkan kelas tersebut. Objek disimpan dalam variabel yang disebut juga dengan *instance of class*.
 >3. Mengenai *property* dan *method* pada OOP bahasa pemrograman Dart. *Property* merupakan ciri-ciri suatu class atau hal-hal yang dimiliki suatu *class* untuk menggambarkan suatu objek yang memiliki sifat seperti variabel. Sedangkan *method* merupakan sifat atau perilaku (aktivitas yang dapat dilakukan*)* suatu *class*. *Method* merupakan sebuah fungsi yang terdapat dalam sebuah *class* yang mana pembuatannya juga sama seperti pembuatan sebuah fungsi.
 
 </br>
@@ -55,7 +55,7 @@ Keuntungan *Object oriented programming* (OOP) adalah sebagai berikut.
 
 ### **Class**
 
-*Class* merupakan abstraksi, gambaran, blueprint dari sebuah benda (objek). *Class* memiliki ciri-ciri yang disebut *property* dan memiliki sifat dan kemampuan yang disebut *method*.
+*Class* merupakan abstraksi, gambaran, *blueprint* dari sebuah benda (objek). *Class* memiliki ciri-ciri yang disebut *property* dan memiliki sifat dan kemampuan yang disebut *method*.
 
 Ketika membuat *class*, maka digunakan kata kunci `class` dan diikuti dengan nama *class* dengan diawali huruf besar (*Pascal Case*). Setiap *property* dan *method* diletakkan di dalam kurung kurawal `{ }`.
 
