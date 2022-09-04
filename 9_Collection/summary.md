@@ -1,4 +1,4 @@
-# **(8) Advance Function, Async-Await**
+# **(9) Collection**
 
 *File* ini merupakan resume dari materi *section* 9 pada program Flutter. From Zero to Hero dari Alterra Academy pada Studi Independen Bersertifikat Batch 3 tahun 2022.
 
@@ -149,9 +149,9 @@ void main() async {
 
 </br>
 
-### Collection
+### **Collection**
 
-*Collection m*erupakan struktur data yang lebih canggih untuk menangani masalah yang lebih kompleks. Struktur data ini dapat menampung kumpulan data pada satu tempat atau variabel.
+*Collection* merupakan struktur data yang lebih canggih untuk menangani masalah yang lebih kompleks. Struktur data ini dapat menampung kumpulan data pada satu tempat atau variabel.
 
 1. **List**
     
