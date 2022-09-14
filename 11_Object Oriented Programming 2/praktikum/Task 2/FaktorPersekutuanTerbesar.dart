@@ -8,14 +8,12 @@ class FaktorPersekutuanTerbesar extends Matematika {
 
   @override
   int hasil() {
-    int a = x;
-    int b = y;
-    int c = 0;
-    while (b != 0) {
-      c = a % b;
-      a = b;
-      b = c;
+    int z = 0;
+    while (y != 0) {
+      z = x % y;
+      x = y;
+      y = z;
     }
-    return a;
+    return x;
   }
 }
