@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Home.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,8 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return MaterialApp(
+      title: 'Telegram App', 
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+        accentColor: Colors.blueAccent,
+        backgroundColor: Colors.white,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Home(),
     );
   }
 }
