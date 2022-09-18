@@ -18,7 +18,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
           UserAccountsDrawerHeader(
             accountName: Text('Nur Muhammad'),
             currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage('https://i.pravatar.cc/150?img=1'),
+              backgroundImage: NetworkImage("https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/08/10/3254472262.jpg"),
             ),
             accountEmail: Text('sangmastahnm@gmail.com', style: TextStyle(color: Colors.white70),),
           
@@ -34,7 +34,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     _icon = Icons.wb_sunny;
                   }
                   else {
-            _icon = Icons.brightness_2;
+                    _icon = Icons.brightness_2;
                   }
                 },
               ),
@@ -77,7 +77,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
             onTilePressed: () {},
           ),
 
-          Divider(),
+          const Divider(),
 
           DrawerListTile(
             iconData: Icons.person_add,
@@ -95,7 +95,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
     );
   }
 }
-
 
 class DrawerListTile extends StatelessWidget {
   final IconData iconData;
