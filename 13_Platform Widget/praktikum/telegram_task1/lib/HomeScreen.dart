@@ -73,7 +73,14 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           }, 
         ), 
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.blue[400],
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
