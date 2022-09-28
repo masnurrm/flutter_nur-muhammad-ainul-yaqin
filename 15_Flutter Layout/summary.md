@@ -1,4 +1,4 @@
-# **(15) Flutter Command Line Interface (CLI) and Flutter Package Management**
+# **(15) Flutter Layout**
 
 *File* ini merupakan resume dari materi *section* 15 pada program Flutter. From Zero to Hero dari Alterra Academy pada Studi Independen Bersertifikat Batch 3 tahun 2022.
 
