@@ -10,7 +10,7 @@
 
 </br>
 
-Di section 18 (delapan belas) ini saya belajar tentang **pengaturan *layout* pada Flutter beserta beberapa *behavior* unik di dalamnya.**
+Di section 18 (delapan belas) ini saya belajar tentang **pengaturan *layout* pada Flutter beserta beberapa *behavior* unik di dalamnya, serta mengenai beberapa *advance user input (picker)*.**
 
 
 > **TL;DR**
@@ -20,6 +20,7 @@ Di section 18 (delapan belas) ini saya belajar tentang **pengaturan *layout* pad
 >1. Mengenai *basic* UI *layout* pada Flutter. *Basic* UI *layout* pada Flutter sendiri sebenarnya terbagi menjadi 2 bagian besar, yaitu `Row` dan `Column`. `Row` meletakkan *widget children*-nya berjajar secara horizontal, sedangkan `Column` meletakkan *widget* *children*-nya berurut secara vertikal. 
 >2. Mengenai *axis alignment* pada Flutter. Properti `MainAxisAlignment` digunakan `Row` dan `Column` untuk memposisikan *children* mereka di *extra space* yang ada. Properti `CrossAxisAlignment` digunakan `Row` dan `Column` untuk memposisikan *children* mereka pada *cross axis*. *Cross axis* dari `Row` adalah vertikal, sedangkan *cross axis* dari `Column` adalah horizontal. 
 >3. Mengenai `Expanded` *widget* pada Flutter. `Expanded` *widget* berfungsi untuk membungkus *widget* lain sehingga ukuran dari *child* `Expanded` *widget* akan dipaksa untuk memenuhi ruang yang tersedia. `Expanded` *widget* sangat berguna untuk membuat aplikasi yang responsif. *Widget* ini harus berada dalam turunan *parent widget* `Row` dan `Column`, serta memiliki *default value* berupa `FlexFit.tight`. Perubahan ukuran pada *widget* ini ditentukan dengan properti `Flex`.
+>4. Mengenai *Form Picker* untuk *User Input*. Terdapat beberapa *form picker* yang disediakan oleh Flutter, beberapa di antaranya adalah *date picker, color picker,* dan *file picker*.
 
 </br>
 
@@ -182,3 +183,21 @@ Terdapat 4 bagian yang disusun ke dalam *column* sebagai berikut.
 Sehingga, didapatkan hasil akhir sebagai berikut.
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f1f9b580-ccf7-4082-a5a5-f8c1c49c4284/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220928%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220928T073909Z&X-Amz-Expires=86400&X-Amz-Signature=7006f43b7ef552b2061672d437b6d959e0675e1846823bbcf475c532b23cfba9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+</br>
+
+### **Form Picker (Advance User Input)**
+
+Terdapat beberapa *form picker* yang disediakan oleh Flutter, beberapa di antaranya adalah sebagai berikut.
+
+1. **Date Picker**
+    
+    *Widget* dimana *user* bisa memasukkan tanggal. *Date picker* dapat dibuat dengan menggunakan fungsi bawaan `showDatePicker`.
+    
+2. **Color Picker**
+    
+    *Widget* dimana user bisa memilih *color*. *Color picker* dapat dibuat dengan menggunakan *package* `flutter_collorpicker`.
+    
+3. **File Picker**
+    
+    *Widget* yang digunakan untuk mengakses *storage*, memilih *file*, dan membuka *file*. File *picker* dapat dibuat dengan menggunakan *package* `file_picker` dan `open_file`.
