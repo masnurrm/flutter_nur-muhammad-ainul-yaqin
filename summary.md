@@ -10,7 +10,7 @@
 
 </br>
 
-Di section 20 (dua puluh) ini saya belajar tentang ***navigation* pada aplikasi yang dibuat dengan Flutter.**
+Di section 21 (dua puluh satu) ini saya belajar tentang ***state management* pada Flutter serta pengenalan *state* `Provider`.**
 
 > **TL;DR**
 > 
