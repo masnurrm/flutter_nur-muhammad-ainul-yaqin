@@ -72,11 +72,9 @@ class _CreateContactState extends State<CreateContact> {
                 controller: contactNameController,
                 decoration: InputDecoration(
                   fillColor: Colors.white,
-                  hintText: "Steve Jobs",
-                  labelText: "Contact Name",
+                  labelText: "Name",
                   focusColor: ContactTheme.secondaryTextColor,
                   hintStyle: ContactTheme.secondaryTextStyle.copyWith(fontSize: 10),
-                  suffixIcon: const Icon(Icons.person),
                   counterText: "",
                   suffixIconColor: ContactTheme.secondaryTextColor,
                   border: const UnderlineInputBorder(
@@ -104,11 +102,9 @@ class _CreateContactState extends State<CreateContact> {
                 maxLength: 13,
                 decoration: InputDecoration(
                   fillColor: Colors.white,
-                  hintText: "082193xxxx",
-                  labelText: "Contact Number",
+                  labelText: "Phone Number",
                   focusColor: ContactTheme.secondaryTextColor,
                   hintStyle: ContactTheme.secondaryTextStyle.copyWith(fontSize: 10),
-                  suffixIcon: const Icon(Icons.phone),
                   counterText: "",
                   suffixIconColor: ContactTheme.secondaryTextColor,
                   border: const UnderlineInputBorder(

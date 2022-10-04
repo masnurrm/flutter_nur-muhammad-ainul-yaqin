@@ -20,11 +20,6 @@ class _ContactMainState extends State<ContactMain> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.5,
-        leading: Icon(
-          Icons.people_alt,
-          size: 35,
-          color: ContactTheme.primaryTextColor,
-        ),
         centerTitle: true,
         actions: [
           GestureDetector(
@@ -36,13 +31,6 @@ class _ContactMainState extends State<ContactMain> {
               margin: EdgeInsets.only(
                 right: ContactTheme.verticalMargin,
               ),
-              height: 35,
-              width: 35,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: ContactTheme.primaryColor,
-              ),
-              child: const Icon(Icons.add),
             ),
           )
         ],

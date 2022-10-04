@@ -6,7 +6,7 @@ class ContactTheme {
   static double verticalMargin = 18.0;
 
   static Color backgroundColor = const Color(0xffefefef);
-  static Color primaryColor = const Color(0xff43AF9F);
+  static Color primaryColor = Colors.blueAccent;
 
   static Color successColor = Colors.green.shade900;
   static Color errorColor = Colors.red.shade900;
