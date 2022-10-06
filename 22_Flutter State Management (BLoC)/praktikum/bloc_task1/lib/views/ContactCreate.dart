@@ -47,15 +47,9 @@ class _ContactCreateState extends State<ContactCreate> {
                     keyboardType: TextInputType.name,
                     decoration: const InputDecoration(
                       labelText: 'Name',
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.person),
+                      hintText: 'Enter your name'
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter a name';
-                      }
-                      return null;
-                    },
+                    validator: _validateName,
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
@@ -63,18 +57,9 @@ class _ContactCreateState extends State<ContactCreate> {
                     keyboardType: TextInputType.phone,
                     decoration: const InputDecoration(
                       labelText: 'Phone',
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.phone),
+                      hintText: 'Enter your phone number with +62'
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter a phone number';
-                      }
-                      // else if (value.length < 11 && value.length > 15) {
-                      //   return 'Phone number must be 11 to 15 digits length';
-                      // }
-                      return null;
-                    },
+                    validator: _validatePhone
                   ),
                   const SizedBox(height: 24),
                   BlocBuilder<ContactBloc, ContactState>(
@@ -122,5 +107,45 @@ class _ContactCreateState extends State<ContactCreate> {
         ),
       ),
     );
+  }
+
+  String? _validateName(String? value) {
+    if(value!.isEmpty){
+      return '*Required Field';
+    } 
+    else if(value.length < 3){
+      return 'Name is too short';
+    } 
+    else {
+      return null;
+    }
+  }
+
+  String? _validatePhone(String? value) {
+    if(isMobileNumberValid(value!)){
+      return '*Required Field';
+    } 
+    else if(value.length < 11){
+      return 'Phone must be at least 11 digits';
+    } 
+    else if (value.length > 15) {
+      return 'Phone must not be greater than 15 digits';
+    }
+    else {
+      return null;
+    }
+  }
+
+  bool isMobileNumberValid(String phoneNumber) {
+    String regexPattern = r'^(?:[1-9])?[0-9]{11,15}$';
+    var regExp = RegExp(regexPattern);
+
+    if (phoneNumber.isEmpty) {
+      return false;
+    } 
+    else if (regExp.hasMatch(phoneNumber)) {
+      return true;
+    }
+    return false;
   }
 }

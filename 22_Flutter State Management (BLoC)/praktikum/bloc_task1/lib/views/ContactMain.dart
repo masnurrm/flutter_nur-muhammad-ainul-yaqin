@@ -49,7 +49,7 @@ class ContactMain extends StatelessWidget {
                     ),
                     title: Text(contact.name),
                     subtitle: Text(contact.phone),
-                    tileColor: Colors.green,
+                    tileColor: const Color.fromARGB(98, 95, 185, 218),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
