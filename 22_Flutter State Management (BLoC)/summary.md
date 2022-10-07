@@ -28,7 +28,7 @@ Adapun versi detail resume sebagai berikut.
 
 *State* *management* `BLoC` (*Business Logic Component*) merupakan *state management* yang memisahkan antara *business logic* dengan UI (*user interface*). *State management* `BLoC` mirip dengan MVC pada pengembangan *website*.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de4066ef-fc33-4721-9c96-716e9fcc87cc/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/de4066ef-fc33-4721-9c96-716e9fcc87cc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T070943Z&X-Amz-Expires=86400&X-Amz-Signature=e31af8b26afb545727332508834fccc132d07feecbc6c25c9286808670af5344&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 Terdapat beberapa kelebihan dari *state management* `BLoC`, beberapa di antaranya adalah sebagai berikut.
 
@@ -44,7 +44,7 @@ Terdapat beberapa kelebihan dari *state management* `BLoC`, beberapa di antarany
 
 `Stream` merupakan proses yang dilakukan *asynchronous* yang merupakan aktor atau proses utama di dalam *state management* `BLoC`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ebdebe0b-75c1-4d9d-86af-1b5780c21e3c/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ebdebe0b-75c1-4d9d-86af-1b5780c21e3c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T070959Z&X-Amz-Expires=86400&X-Amz-Signature=09802446e8708500045a38406355ccced5364740c46a1a89cbaaf58e25c15372&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -78,7 +78,7 @@ Hal yang perlu dilakukan adalah membuat 3 *file* dart baru, yaitu `counter_bloc.
 
 Tambahkan *event* di `counter_event.dart`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3ef18710-f2fc-450e-97cf-20c332177129/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3ef18710-f2fc-450e-97cf-20c332177129/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071105Z&X-Amz-Expires=86400&X-Amz-Signature=978f6b019888f18ff4664c45dbbfb7bbf838d5f6ffb58b2dae08d155a2893a48&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 
 </br>
@@ -88,7 +88,7 @@ Tambahkan *event* di `counter_event.dart`.
 
 Tambahkan *state* untuk menyimpan nilai *counter* di `counter_state.dart`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/17f81552-af78-49b1-a1e8-b6966d2d24d4/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/17f81552-af78-49b1-a1e8-b6966d2d24d4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071122Z&X-Amz-Expires=86400&X-Amz-Signature=94bce94979061c0c89aea7066e2188a236627384ff52a6c369c13b94f6925219&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -97,7 +97,7 @@ Tambahkan *state* untuk menyimpan nilai *counter* di `counter_state.dart`.
 
 Tambahkan logika bisnis di `counter_bloc.dart` dengan menggunakan fungsi `emit` untuk mengirim *state* terbaru.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/78cab2cb-a03b-4c9d-bc02-1b696d57c788/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/78cab2cb-a03b-4c9d-bc02-1b696d57c788/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071137Z&X-Amz-Expires=86400&X-Amz-Signature=59e2c4388a718cda2ed85a44d571c834d32fe9f5adb7bd104b1251ed3d0dd5d2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -106,7 +106,7 @@ Tambahkan logika bisnis di `counter_bloc.dart` dengan menggunakan fungsi `emit` 
 
 Tambahkan `BlocProvider` di main.dart
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8a173de3-eb75-4cf4-9628-ba3a664746ed/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8a173de3-eb75-4cf4-9628-ba3a664746ed/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071149Z&X-Amz-Expires=86400&X-Amz-Signature=db4f1838ddf6b7c2c710bfa82313a10abd51720230683505348e7cdda207c90f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -115,7 +115,7 @@ Tambahkan `BlocProvider` di main.dart
 
 Bual folder baru di *screens*, di dalamnya buat *file* dart baru bernama `home_page.dart`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d793f9d6-31a3-4517-a468-2049f1967dfa/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d793f9d6-31a3-4517-a468-2049f1967dfa/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071204Z&X-Amz-Expires=86400&X-Amz-Signature=675d4f68696e7f48b31e01bca67cc01b3857fd657b0e5911b775f1f9912367f1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -124,7 +124,7 @@ Bual folder baru di *screens*, di dalamnya buat *file* dart baru bernama `home_p
 
 Tambahkan `BlocBuilder` di `home_page.dart`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b3311afe-97a3-4684-8d9f-73b7bc023692/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b3311afe-97a3-4684-8d9f-73b7bc023692/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071221Z&X-Amz-Expires=86400&X-Amz-Signature=9ddd29b5f6285782eb22d65e28965ed1735cc951b98aca10f66068e83a9865a0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -133,7 +133,7 @@ Tambahkan `BlocBuilder` di `home_page.dart`.
 
 Menampilkan nilai terbaru yang dimiliki *state*.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69a3a3ae-0645-4a44-a529-973e4f4a2da5/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/69a3a3ae-0645-4a44-a529-973e4f4a2da5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071237Z&X-Amz-Expires=86400&X-Amz-Signature=4174164d9111dc217fb25f8786c5840493238c3638cb2f17a22118d5cec1095f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 </br>
 
@@ -142,4 +142,4 @@ Menampilkan nilai terbaru yang dimiliki *state*.
 
 Tambahkan `http://context.read` pada fungsi `onPressed` `ElevatedButton`.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/24543fc1-f00b-4218-aaa9-356e559c07fe/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/24543fc1-f00b-4218-aaa9-356e559c07fe/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T071249Z&X-Amz-Expires=86400&X-Amz-Signature=a2062a0dc7c69d510e99d1bbbf25a97e9df06e232fa3722e4775cada9a34a3eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
