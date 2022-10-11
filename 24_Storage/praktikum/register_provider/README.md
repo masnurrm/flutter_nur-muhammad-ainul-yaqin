@@ -1,4 +1,4 @@
-# register_provider
+# register_bloc
 
 A new Flutter project.
 
