@@ -11,6 +11,5 @@ class FoodAPI {
     List<Food> foods = (response.data as List).map((e) => Food(id: e['id'], name: e['name'])).toList();
 
     return foods;
-
   }
 }

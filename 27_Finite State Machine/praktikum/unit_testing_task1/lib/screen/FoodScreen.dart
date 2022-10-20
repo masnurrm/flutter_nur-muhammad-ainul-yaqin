@@ -15,10 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) { 
-      Provider.of<FoodViewModel>(context, listen: false).getFoods();
+      Provider.of<FoodViewModel>(context, listen: false).getAllFoods();
     });
   }
-  
   
   @override
   Widget build(BuildContext context) {

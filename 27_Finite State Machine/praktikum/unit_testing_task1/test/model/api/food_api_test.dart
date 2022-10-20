@@ -4,22 +4,22 @@ import 'package:unit_testing_task1/model/api/FoodAPI.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
 
-import 'food_api_test.mocks.dart';
+// import 'food_api_test.mocks.dart';
 
-@GenerateMocks([FoodAPI])
+// @GenerateMocks([FoodAPI])
 void main() {
   group('FoodAPI', () {
-    FoodAPI foodAPI = MockFoodAPI();
+    // FoodAPI foodAPI = MockFoodAPI();
 
     test('getAllFoods', () async {
-      when(FoodAPI.getFoods()).thenAnswer((_) async => <Food>[
-        Food(id: 1, name: 'Nasi Goreng'),
-        Food(id: 2, name: 'Mie Goreng'),
-        Food(id: 3, name: 'Soto'),
-        Food(id: 4, name: 'Sate'),
-        Food(id: 5, name: 'Bakso'),
-      ]);
-      final foods = await FoodAPI.getFoods();
+      // when(foodAPI.getAllFoods()).thenAnswer((_) async => <Food>[
+      //   Food(id: 1, name: 'Nasi Goreng'),
+      //   Food(id: 2, name: 'Mie Goreng'),
+      //   Food(id: 3, name: 'Soto'),
+      //   Food(id: 4, name: 'Sate'),
+      //   Food(id: 5, name: 'Bakso'),
+      // ]);
+      var foods = await FoodAPI.getFoods();
       expect(foods.isNotEmpty, true);
     });
   }); 
