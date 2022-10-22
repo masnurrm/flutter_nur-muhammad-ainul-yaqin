@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class GalleryBottomSheet extends StatelessWidget {
   const GalleryBottomSheet({super.key, required this.image, required this.description});
@@ -11,15 +12,25 @@ class GalleryBottomSheet extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: Row(
         children: [
-          Container(
+          // Container(
+          //   width: (MediaQuery.of(context).size.width)/2.5,
+          //   height: (MediaQuery.of(context).size.width)/2.5,
+          //   decoration: BoxDecoration(
+          //     borderRadius: BorderRadius.circular(10),
+          //     image: DecorationImage(
+          //       image: NetworkImage(image),
+          //       fit: BoxFit.cover,
+          //     ),
+          //   ),
+          // ),
+          SizedBox(
             width: (MediaQuery.of(context).size.width)/2.5,
             height: (MediaQuery.of(context).size.width)/2.5,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: NetworkImage(image),
-                fit: BoxFit.cover,
-              ),
+            child: CachedNetworkImage(
+              imageUrl: image,
+              fit: BoxFit.cover,
+              placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
           const SizedBox(
