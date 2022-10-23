@@ -1,25 +1,22 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
-class PreviewPost extends StatefulWidget {
-  const PreviewPost({Key? key}) : super(key: key);
+import 'CreatePostScreen.dart';
 
-  @override
-  State<PreviewPost> createState() => _PreviewPostState();
-}
+class PreviewPost extends StatelessWidget {
+  const PreviewPost({
+    super.key,
+    required this.imageFile,
+    required this.date,
+    required this.selectedColor,
+    required this.caption,
+  });
 
-class _PreviewPostState extends State<PreviewPost> {
-  // PreviewPostData(
-  //     {Key? key,
-  //     required this.imageFIle,
-  //     required this.date,
-  //     required this.selectionColor,
-  //     required this.caption})
-  //     : super(key: key);
-
-  // final File imageFIle;
-  // final String date;
-  // final Map<String, dynamic> selectionColor;
-  // final String caption;
+  final File imageFile;
+  final String date;
+  final Color selectedColor;
+  final String caption;
 
   @override
   Widget build(BuildContext context) {
@@ -29,61 +26,52 @@ class _PreviewPostState extends State<PreviewPost> {
           title: const Text('Preview Post'),
           centerTitle: true,
         ),
-        body: Column(
+       body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
           children: [
-            // image
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                bottom: Radius.circular(10),
-              ),
-              child: Image.network(
-                'https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/05/12/2540019708.jpg',
-                width: 600,
-                height: 400,
-                fit: BoxFit.cover,
-              ),
+            Image.file(
+              imageFile,
+              height: 300,
             ),
-            
-            // title section
-            Container(
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          child: const Text(
-                            'Published: 02/03/2022',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
-                  ),
-                  const Text('Color: '),
-                  const Icon(
-                    Icons.circle,
-                    color: Colors.red,
-                  ),
-                ]
-              ),
+            const SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Published : $date",
+                  style: const TextStyle(color: Colors.black, fontSize: 15),
+                ),
+                Row(
+                  children: [
+                    const Text(
+                      "Color",
+                      style: TextStyle(color: Colors.black, fontSize: 15),
+                    ),
+                    
+                    const SizedBox(height: 10,),
+                    Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: selectedColor),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            // text section
-            const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'Shin Ryu-jin atau lebih dikenal sebagai Ryujin, adalah seorang penyanyi rap, dan penari asal Korea Selatan. Ia merupakan anggota dari grup vokal wanita, ITZY di bawah kontrak JYP Entertainment.',
-                textAlign: TextAlign.center,
-              ),
-            )
-          ],
+            const SizedBox(height: 10,),
+            Center(
+                child: Text(
+                  caption,
+                  style: const TextStyle(fontSize: 16),
+                  textAlign: TextAlign.center,
+                )
+              )
+            ],
+          ),
         ),
-      )
+      ),
     );
   }
 }
