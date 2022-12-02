@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:project/about_screen.dart';
-import 'package:project/contact_screen.dart';
-import 'package:project/homepage_screen.dart';
-import 'package:project/login_screen.dart';
+
+import 'view/about_view.dart';
+import 'view/data_view.dart';
+import 'view/homepage_view.dart';
+import 'view/login_view.dart';
 
 void main() {
   // SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]).then((_) {
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/about':(context) => AboutUs(),
         '/contact':(context) => HomePage(),
         '/login':(context) => Login(),
+        '/data_user':(context) => DataUser(),
       },
       title: 'Flutter Weekly Task 1',
       debugShowCheckedModeBanner: false,
